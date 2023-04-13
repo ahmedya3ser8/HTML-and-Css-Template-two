@@ -375,8 +375,10 @@ header nav .form i {
 }
 .portfolio .shuffle li {
   padding: 10px;
+  cursor: pointer;
 }
-.portfolio .shuffle li.active {
+.portfolio .shuffle li.active,
+.portfolio .shuffle li:hover {
   background-color: var(--main-color);
   color: white;
 }
@@ -649,6 +651,7 @@ header nav .form i {
   display: block;
   height: 100%;
   position: relative;
+  transition: 0.3s linear;
 }
 .our-skills .skills .prog-holder .prog span::before {
   content: attr(data-progress);
@@ -901,6 +904,7 @@ header nav .form i {
 }
 .contact .content textarea.main-input {
   height: 200px;
+  resize: none;
 }
 .contact .content form input[type="submit"] {
   background-color: var(--main-color);
@@ -985,6 +989,20 @@ header nav .form i {
 }
 .footer .social-icons i {
   padding: 10px 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.footer .social-icons i:first-child:hover{
+  background-color: #0078d7;
+}
+.footer .social-icons i:nth-child(2):hover{
+  background-color: #1da1f2;
+}
+.footer .social-icons i:nth-child(3):hover{
+  background-color: #2a6ebb;
+}
+.footer .social-icons i:last-child:hover{
+  background-color: #0a66c2;
 }
 .footer .copyright {
   margin-top: 60px;
