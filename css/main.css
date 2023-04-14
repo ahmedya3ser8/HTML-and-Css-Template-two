@@ -551,6 +551,12 @@ header nav .form i {
   align-items: center;
   border-radius: 50%;
   margin: 0 auto 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.stats .container .box i:hover {
+  background-color: #fff;
+  color: var(--main-color);
 }
 .stats .container .box .numbers {
   font-size: 50px;
@@ -784,6 +790,14 @@ header nav .form i {
   border: 1px solid var(--main-color);
   width: fit-content;
   margin: 30px auto;
+  background: linear-gradient(to right, var(--main-color) 50%, #fff 50%);
+  background-size: 200% 100%;
+  background-position: bottom right;
+  transition: 0.3s;
+}
+.pricing .plans .plan .foot a:hover {
+  background-position: bottom left;
+  color: #fff;
 }
 .pricing .contact-text {
   text-align: center;

@@ -39,6 +39,8 @@ window.onscroll = function() {
   }
 }
 
+// Icrease Number On Scrolling
+
 let statsSection = document.querySelector(".stats");
 let number = document.querySelectorAll(".stats .numbers");
 let started = false;
