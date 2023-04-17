@@ -1,30 +1,21 @@
+// Filter Imgs
 let switcherLis = document.querySelectorAll(".shuffle li");
 let box = document.querySelectorAll(".imgs-holder .box");
 
 switcherLis.forEach((li) => {
-  li.addEventListener("click", RemoveActive);
-  li.addEventListener("click", removeBox);
+  li.addEventListener("click", function() {
+    switcherLis.forEach((li) => {
+      li.classList.remove("active");
+      this.classList.add("active");
+    });
+    box.forEach((el) => {
+      el.style.display = "none";
+    });
+    document.querySelectorAll(this.dataset.filter).forEach((el) => {
+      el.style.display = "block";
+    });
+  })
 });
-
-// Remove Active Class from all li and add active class to current li
-
-function RemoveActive() {
-  switcherLis.forEach((li) => {
-    li.classList.remove("active");
-    this.classList.add("active");
-  });
-}
-
-// Manage Imgs
-
-function removeBox() {
-  box.forEach((el) => {
-    el.style.display = "none";
-  });
-  document.querySelectorAll(this.dataset.filter).forEach((el) => {
-    el.style.display = "block";
-  });
-}
 
 // Animated our-skills
 
